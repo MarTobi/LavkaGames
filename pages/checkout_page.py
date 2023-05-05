@@ -1,10 +1,9 @@
+import time
 from selenium.webdriver import Keys, ActionChains
-
 from base.base_page import Base
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 
 
 class Checkout_page(Base):
@@ -151,6 +150,7 @@ class Checkout_page(Base):
         print(f'Пользователь указал почтовый индекс: "{zipcode}"')
 
     def save_value_price_delivery(self):
+        time.sleep(2)
         value_price_delivery = self.get_price_delivery().text
         return value_price_delivery
 
