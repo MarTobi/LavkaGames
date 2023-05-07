@@ -15,8 +15,6 @@ def test_buy_product_1(set_up_for_buy_products):
     mp.click_button_go_to_catalog()
 
 
-
-
 @pytest.mark.run(order=1)
 def test_buy_product_2(set_up_for_buy_products):
     driver_g = set_up_for_buy_products
