@@ -5,7 +5,7 @@ from pages.cart_page import Cart_page
 from pages.checkout_page import Checkout_page
 
 
-# Тест, который осуществляет добавление продукта в корзину
+#
 @pytest.mark.run(order=2)
 def test_buy_product_1(set_up_for_buy_products):
     driver_g = set_up_for_buy_products
@@ -15,10 +15,7 @@ def test_buy_product_1(set_up_for_buy_products):
     mp.click_button_go_to_catalog()
 
 
-# Тест, который проходит по всей бизнес логике: начиная от авторизации
-# и заканчичая страницей чекаута. Помимо этого написал метод, который ищет специальный продукт на странице,
-# и если его нет, то он открывает следующую и т. д.
-# Помимо этого написал проверку на сравнение суммы со страницей корзины и страницей чекаута.
+
 
 @pytest.mark.run(order=1)
 def test_buy_product_2(set_up_for_buy_products):

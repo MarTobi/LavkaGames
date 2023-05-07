@@ -1,12 +1,9 @@
 import time
 
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.cart_page import Cart_page
-
-
 
 
 # Фикстура, в которой я вынес драйвер, а также добавил авторизацию.
@@ -32,5 +29,3 @@ def set_up_for_buy_products():
     cp.click_button_clear_cart()
     time.sleep(2)
     driver_g.quit()
-
-
